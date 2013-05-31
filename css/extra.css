@@ -2,11 +2,15 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+section a {
+  text-decoration: underline;
+}
+
 section.header {
   height: 500px;
   color: white;
   width: 100%;
-  background: url("/img/rivetoile.jpg") no-repeat scroll center top #000000;
+  background: url("/img/rivetoile.jpg") no-repeat scroll center center #000000;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -38,15 +42,72 @@ section.intro {
   margin: 20px 0;
 }
 
+section {
+  padding: 20px 0;
+  min-height: 200px;
+}
+
 section.content {
   background-color: #34b8d0;
   color: black;
-  width: 100%;
-  padding: 20px 0;
-  min-height: 200px;
   padding-top: 20px;
   font-size: 34px;
   line-height: 40px;
   font-weight: bold;
   text-align: center;
+}
+
+.table th {
+  text-align: center;
+}
+
+.table td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table tr td:first-child {
+  text-align: right;
+  vertical-align: top;
+  padding: 0 4px 8px 8px;
+  font-weight: 300;
+  font-size: 12px;
+}
+
+.table td.withcontent {
+  padding: 2px;
+}
+
+h1 {
+  font: 800 48px/48px "open sans";
+  margin-bottom: 20px;
+}
+
+table a {
+  font-size: 20px;
+}
+
+.demonight, .edgenight, .demonight a, .edgenight a {
+  background-color: black !important;
+  color: white;
+}
+
+.edgeday, .barcampalsace, .edgeday a, .barcampalsace a {
+  background-color: #34b8d0 !important;
+  color: white;
+}
+
+.hackathon, .hackathon a {
+  background-color: #88D8E8 !important;
+  color: white;
+}
+
+footer {
+  background-color: #CCC;
+  color: white;
+  min-height: 100px;
+}
+
+ul.sponsors li {
+  margin: 10px;
 }
