@@ -17,6 +17,14 @@ nav a, nav a:hover, nav a:visited {
   font: 400 18px/20px "gentium book basic";
 }
 
+nav a {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+nav a:hover {
+  color: #34b8d0;
+}
+
 nav ul.inline > li {
   padding: 0 10px;
 }
