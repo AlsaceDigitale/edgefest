@@ -117,28 +117,18 @@ table a {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.edgeday, .edgeday a {
+.edgeday, .edgeday a, .hackathon, .hackathon a, .barcampalsace, .barcampalsace a {
   background-color: #34b8d0 !important;
   color: white;
   transition: all 0.3s ease-in-out 0s;
 }
 
-.hackathon, .hackathon a, .barcampalsace, .barcampalsace a {
-  background-color: #88D8E8 !important;
-  color: white;
-  transition: all 0.3s ease-in-out 0s;
-}
-
 table .demonight:hover, table .demonight:hover a, table .edgenight:hover, table .edgenight:hover a {
-  background-color: #1a1a1a !important;
+  background-color: #333333 !important;
 }
 
-table .edgeday:hover, table .edgeday:hover a {
+table .edgeday:hover, table .edgeday:hover a, table .hackathon:hover, table .hackathon:hover a, table .barcampalsace:hover, table .barcampalsace:hover a {
   background-color: #5dc6da !important;
-}
-
-table .hackathon:hover, table .hackathon:hover a, table .barcampalsace:hover, table .barcampalsace:hover a {
-  background-color: #b3e6f0 !important;
 }
 
 footer {
