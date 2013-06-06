@@ -75,6 +75,10 @@ section {
   min-height: 200px;
 }
 
+section.thin {
+  min-height: 0;
+}
+
 section.intro {
   padding-top: 20px;
   min-height: 0;
@@ -116,6 +120,7 @@ section.content {
 
 .table td.withcontent {
   padding: 2px;
+  font-size: 20px;
 }
 
 h2 {
