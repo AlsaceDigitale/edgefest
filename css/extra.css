@@ -87,6 +87,7 @@ header h1, header p.subtitle, header p.subsubtitle {
 section {
   background-color: white;
   color: #282828;
+  padding-top: 20px;
   padding-bottom: 20px;
   min-height: 200px;
 }
@@ -105,6 +106,7 @@ section.nav {
   color: #282828;
   min-height: 0;
   margin-bottom: 10px;
+  padding-top: 0;
 }
 
 section.content {
