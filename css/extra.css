@@ -3,6 +3,20 @@ body {
   color: #282828;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+
+ul.dotted li {
+  text-indent: -.7em;
+}
+
+ul.dotted li:before {
+  content: "•";
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 section a {
   text-decoration: underline;
 }
