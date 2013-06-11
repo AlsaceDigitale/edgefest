@@ -211,6 +211,17 @@ p.type {
   font-weight: 800;
 }
 
+.sticky {
+  background-color: red;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 @media screen and (max-width: 767px) {
   body {
     padding-left: 0;
