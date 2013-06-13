@@ -96,6 +96,10 @@ section.thin {
   min-height: 0;
 }
 
+section.summercamp h2 {
+  margin-bottom: 0;
+}
+
 section.intro {
   padding-top: 10px;
   padding-bottom: 0;
@@ -157,6 +161,7 @@ h2 {
 
 table a {
   font-size: 20px;
+  line-height: 28px;
   text-decoration: underline;
 }
 
