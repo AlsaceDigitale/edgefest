@@ -1,245 +1,802 @@
+* { /* Convenient border-box model */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: #282828;
+    font-family: 'Open Sans', sans-serif;
+    color: #282828;
+
+    font-size: 1em; /* 16px by default */
+
+    padding-left: 0;
+    padding-right: 0;
 }
 
-.mt-20 {
-  margin-top: 20px;
-}
-
-ul.dotted li {
-  text-indent: -.7em;
-}
-
-ul.dotted li:before {
-  content: "•";
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-section a {
-  text-decoration: underline;
-}
-
-nav {
-  text-align:center;
-  margin-top: 20px;
-}
-
-nav a, nav a:hover, nav a:visited {
-  color: white;
-  text-decoration: none;
-  font: 800 20px/30px "open sans";
-}
-
-nav a {
-  transition: all 0.3s ease-in-out 0s;
-}
-
-nav a:hover {
-  /*color: #34b8d0;*/
-}
-
-nav ul.inline {
-  margin-bottom: 0;
-}
-
-nav ul.inline > li {
-  padding: 0 20px;
-}
+/***** HEADER *****/
 
 header {
-  height: 500px;
-  color: white;
-  width: 100%;
-  background: url("/img/rivetoile.jpg") no-repeat center top fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  
+    /*
+    * Legacy/default boder box models
+    * allows for percentage padding to
+    * increase the box size.
+    */
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  
+    height: auto;
+    
+    width: 100%;
+    padding: 8% 0;
+    
+    font-size: 0.8em;
+    color: white;
+    
+    background: url("/img/rivetoile.jpg") no-repeat center top fixed;
+    
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
 }
 
-header a.mainlink, header a.mainlink:hover, header a.mainlink:visited {
-  color: white;
-  text-decoration: none;
+a.mainlink {
+    padding: 0 2%;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+a.mainlink,
+a.mainlink:hover
+a.mainlink:visited {
+    color: white;
+    text-decoration: none;
 }
 
 header h1 {
-  margin-top: 164px;
-  font: 400 64px/64px 'Londrina Solid';
-  text-shadow: 1px 1px #000000;
+    font: 400 3.5em 'Londrina Solid';
+    line-height: 1.2;
+    
+    margin-top: 0;
+    
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+}
+    
+.subtitle, .subsubtitle { /* Header subsubtitles */
+    font-family: 'Gentium Book Basic', serif;
+    font-weight: 400;
+    line-height: 1.2;
+}
+    
+.subtitle {
+    font-size: 1.8em;
 }
 
-header p.subtitle {
-  margin-top: 20px;
-  font: 400 30px/36px "gentium book basic";
+.subsubtitle {
+    font-size: 1.6em;
 }
 
-header p.subsubtitle {
-  margin-top: 20px;
-  font: 400 26px/32px "gentium book basic";
+/***** NAVIGATION *****/
+
+nav {
+    background-color: #282828;
+
+    min-height: 0;
+    margin-bottom: 1em;
+    padding: 1em 0;
 }
 
-header h1, header p.subtitle, header p.subsubtitle {
-  text-align: center;
+nav,
+.nav-list li {
+    text-align: center;
 }
 
-section {
-  background-color: white;
-  color: #282828;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  min-height: 200px;
+.nav-list {
+    padding-left: 0;
+    margin-left: 0;
 }
 
-section.thin {
-  min-height: 0;
+.nav-list a {
+    transition: all 0.3s ease-in-out 0s;
+}
+    
+.nav-list a,
+.nav-list a:hover,
+.nav-list a:visited {
+    color: white;
+    text-decoration: none;
+    font: 800 1em "Open sans";
+    text-align: center;
+        
+    font-variant: small-caps;
 }
 
-section.summercamp h2 {
-  margin-bottom: 0;
+/***** SECTION HEADERS *****/
+
+section h3, footer h3, .summercamp-section h4 {
+    border-bottom: 1px solid whiteSmoke;
+    padding: 0.5em 0;
+    text-transform: uppercase;
+    margin-bottom: 1.2em;
+
+    text-align: left;
+    font-weight: bold;
 }
 
-section.intro {
-  padding-top: 10px;
-  padding-bottom: 0;
-  min-height: 0;
+section h4 {
+    font-size: 0.85em;
+    font-weight: normal;
+    line-height: 1.3;
+    font-variant: small-caps;
+    text-align: center;
+    
+    margin-top: -0.6em;
+    margin-bottom: 1.3em;
+    
+    color: rgb(153, 153, 153);
 }
 
-section.intro .span12 p:last-child {
-  margin-bottom: 0;
+.summercamp-section h4 {
+    font-size: 1em;
+    margin-top: 2.5em;
+    color: white;
 }
 
-section.nav {
-  background-color: #282828;
-  color: #282828;
-  min-height: 0;
-  margin-bottom: 10px;
-  padding-top: 0;
+/***** SECTIONS CONTENTS *****/
+
+section section { /* Double sections (Hacky) Summer camp */
+    color: white;
+    margin-bottom: 1.7em;
 }
 
-section.content {
-  background-color: #34b8d0;
-  color: #282828;
-  padding-top: 20px;
-  font-size: 34px;
-  line-height: 40px;
-  font-weight: bold;
-  text-align: center;
+.content section,
+.event-body {
+    padding: 0 4%;
+    line-height: 1.3;
+}
+    
+.content .full-section {
+    width: 100%;
+}
+    
+.content .event-body {
+    width: 100%;
+    line-height: 1.4;
+}
+    
+.event-infos p {
+    margin-bottom: 1.3em;
+}
+    
+.intro p {
+    margin: 1em 0;
+}
+    
+.intro p:first-child {
+    font-size: 1.2em;
+    font-style: italic;
 }
 
-section.sponsors h2 {
-  margin-bottom: 20px;
+/***** SECTIONS LISTS *****/
+
+.project-call-list,
+.better-list {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.4em;
+}
+    
+.project-call-list li,
+.better-list li {
+    margin-bottom: 1em;
+    position: relative;
+    line-height: 1.35;
+}
+    
+.better-list li {
+    margin-bottom: 0.6em;
+}
+    
+.project-call-list li:last-child,
+.better-list li:last-child {
+    margin-bottom: 0;
+}
+    
+.project-call-list li:before,
+.better-list li:before {
+    content: '–';
+    position: absolute;
+    left: -1.3em;
 }
 
-.table th {
-  text-align: center;
+/***** SECTIONS TABLES *****/
+
+.table td, .table th {
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.8em;
+    line-height: 1.4;
+}
+
+.table td:first-child {
+    text-align: right;
+    vertical-align: middle;
+    font-weight: 300;
+    font-size: 0.6em;
 }
 
 .table td {
-  text-align: center;
-  vertical-align: middle;
+    padding: 1%;
+}
+    
+td hr {
+    height: 1px;
+    background-color: white;
+    border:0;
+    color: white;
+    width: 60%;
+    margin: 1em auto;
+}
+    
+.demonight a,
+.edgenight a,
+.edgeday a,
+.hackathon a,
+.barcampalsace a,
+.summercamp a {
+    text-decoration: none;
+    text-align: center;
+    font-variant: small-caps;
+    line-height: 1.2;
+}
+    
+.demonight,
+.edgenight,
+.demonight-section,
+.edgenight-section,
+.demonight a,
+.edgenight a {
+    background-color: #282828 !important;
+    color: white;
+    transition: all 0.3s ease-in-out 0s;
 }
 
-.table tr td:first-child {
-  text-align: right;
-  vertical-align: top;
-  padding: 0 4px 8px 8px;
-  font-weight: 300;
-  font-size: 12px;
+.edgeday,
+.edgeday-section,
+.edgeday a,
+.hackathon,
+.hackathon-section,
+.hackathon a,
+.barcampalsace,
+.barcampalsace-section,
+.barcampalsace a {
+    background-color: #34b8d0 !important;
+    color: white;
+    transition: all 0.3s ease-in-out 0s;
 }
 
-.table td.withcontent {
-  padding: 2px;
-  font-size: 20px;
+.summercamp,
+.summercamp-section,
+.summercamp a {
+    background-color: #11922E !important;
+    color: white;
+    transition: all 0.3s ease-in-out 0s;
 }
 
-h2 {
-  font: 800 24px/28px "open sans";
-  margin-bottom: 40px;
+.summercamp:hover,
+.summercamp:hover a {
+    background-color: #48A95D !important;
 }
 
-table a {
-  font-size: 20px;
-  line-height: 28px;
-  text-decoration: underline;
+.demonight:hover,
+.demonight:hover a,
+.edgenight:hover,
+.edgenight:hover a {
+    background-color: #424242 !important;
 }
 
-.demonight, .edgenight, .demonight a, .edgenight a {
-  background-color: #282828 !important;
-  color: white;
-  transition: all 0.3s ease-in-out 0s;
+.edgeday:hover,
+.edgeday:hover a,
+.hackathon:hover,
+.hackathon:hover a,
+.barcampalsace:hover,
+.barcampalsace:hover a {
+    background-color: #5dc6da !important;
+}
+    
+.demonight a:after,
+.edgenight a:after,
+.edgeday a:after,
+.hackathon a:after,
+.barcampalsace a:after,
+.summercamp a:after {
+    display: block;
+    content: "»";
 }
 
-.edgeday, .edgeday a, .hackathon, .hackathon a, .barcampalsace, .barcampalsace a {
-  background-color: #34b8d0 !important;
-  color: white;
-  transition: all 0.3s ease-in-out 0s;
+.demonight-section a,
+.edgenight-section a,
+.summercamp-section a,
+.edgeday-section a,
+.hackathon-section a,
+.barcampalsace-section a {
+    border-bottom: solid 1px #BBB;
+    
+    transition-property: background-color, color, border-color;
+    
+    transition: 0.3s ease-in-out 0s;
+    transition: 0.3s ease-in-out 0s;
+    transition: 0.3s ease-in-out 0s;
 }
 
-.summercamp, .summercamp a {
-  background-color: #11922E !important;
-  color: white;
-  transition: all 0.3s ease-in-out 0s;
+.demonight-section a,
+.edgenight-section a {
+    color: #BBB !important;
+    border-bottom: solid 1px #BBB;
 }
 
-table .summercamp:hover, table .summercamp:hover a {
-  background-color: #48A95D !important;
+.edgeday-section a,
+.hackathon-section a,
+.barcampalsace-section a {
+    color: #117587 !important;
+    border-bottom: solid 1px #117587;
 }
 
-table .demonight:hover, table .demonight:hover a, table .edgenight:hover, table .edgenight:hover a {
-  background-color: #424242 !important;
+.summercamp-section a {
+    color: #065F19 !important;
+    border-bottom: solid 1px #065F19;
 }
 
-table .edgeday:hover, table .edgeday:hover a, table .hackathon:hover, table .hackathon:hover a, table .barcampalsace:hover, table .barcampalsace:hover a {
-  background-color: #5dc6da !important;
+.demonight-section a:hover,
+.edgenight-section a:hover,
+.summercamp-section a:hover,
+.edgeday-section a:hover,
+.hackathon-section a:hover,
+.barcampalsace-section a:hover,
+.demonight-section a:active,
+.edgenight-section a:active,
+.summercamp-section a:active,
+.edgeday-section a:active,
+.hackathon-section a:active,
+.barcampalsace-section a:active {
+    text-decoration: none;
+    
+    transition: 0.3s ease-in-out 0s;
+    transition: 0.3s ease-in-out 0s;
+    transition: 0.3s ease-in-out 0s;
+    
+    border-bottom: solid 1px transparent;
 }
+
+.demonight-section a:hover,
+.edgenight-section a:hover,
+.demonight-section a:active,
+.edgenight-section a:active {
+    
+    background-color: white !important;
+    color: #282828 !important;
+    
+}
+
+.edgeday-section a:hover,
+.hackathon-section a:hover,
+.barcampalsace-section a:hover,
+.edgeday-section a:active,
+.hackathon-section a:active,
+.barcampalsace-section a:active {
+    
+    background-color: white !important;
+    color: #34b8d0 !important;
+}
+
+.summercamp-section a:hover,
+.summercamp-section a:active {
+    
+    background-color: white !important;
+    color: #11922E !important;
+}
+
+/***** SECTIONS IMAGES *****/
+    
+.thumbs {
+    margin: 0;
+    margin-bottom: 1em;
+}
+    
+.thumbs,
+.thumbs li {
+    display: inline;
+}
+    
+.thumbs li {
+    width: 48%;
+    max-width:400px;
+    margin: auto;
+    margin-bottom: 0.3em;
+    
+    display: inline-block;
+}
+    
+.event-images {
+    margin-bottom: 1em;
+}
+
+.lone-image {
+    margin-bottom: 1em;
+}
+
+/***** SPONSORS *****/
+
+.sponsors {
+    border-top: solid 1px #EEEEEE;
+    box-shadow: 0 -1px 5px 0px #F7F7F7;
+    margin-top: 2em;
+}
+
+.sponsor-list {
+    text-align: center;
+}
+    
+.sponsor-list li {
+    margin-bottom: 2em;
+}
+    
+.sponsor-list li:last-child {
+    margin-bottom: 0;
+}
+
+/***** FOOTER *****/
 
 footer {
-  background-color: #282828;
-  color: white;
-  font: 800 20px/30px "open sans";
-  padding: 20px 0;
+    background-color: #282828;
+    color: white;
+    font: 800 1em "open sans";
+    padding: 1em;
 }
 
-ul.sponsors li {
-  padding: 0;
-  margin: 0 20px 20px 0;
+footer a {
+    color:#76A2CA;
 }
 
-p.date, p.venue, p.type {
-  margin: 0;
+footer a:visited {
+    color:#426E95;
 }
 
-p.type {
-  margin-bottom: 10px;
-  font-weight: 800;
+footer a:hover,
+footer a:active {
+    color:#B7CEDE;
 }
 
-.sticky {
-  background-color: red;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-weight: 600;
-  position: absolute;
-  top: 0;
-  width: 100%;
+footer a:hover,
+footer a:active,
+footer a:visited {
+    text-decoration: none;
+}
+    
+.edition-2012:before {
+    content: "»";
+    margin-right: 0.3em;
 }
 
-@media screen and (max-width: 767px) {
-  body {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  section {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+/***** MEDIA QUERIES *****/
+
+/*                              319px */
+@media screen and (max-width:19.938em) {
+    
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    header {
+        font-size: 0.8em;
+    }
+    
+    .subtitle { /* Header subtitle */
+        margin-top: 15%;
+    }
+
+    .subsubtitle { /* Header subsubtitle */
+        margin-top: 12%;
+    }
+    
+    .nav-list,
+    .nav-list li  {
+        width: 100%;
+    }
+    
+    .nav-list {
+        padding-left: 0;
+    }
 }
 
-@media screen and (max-width: 510px) {
-  header h1 {
-    margin-top: 150px;
-  }
+/*                              500px */
+@media screen and (max-width:31.250em) {
+    
+    nav {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-list  {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        padding-left: 0;
+    }
+    
+    .nav-list li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0.5em;
+        color: transparent;
+        transition: background-color 0.3s ease-in-out 0s;
+    }
+    
+    .nav-list li:hover,
+    .nav-list li:active {
+        background-color: #545454;
+        transition: background-color 0.1s ease-in-out 0s;
+    }
+    
+    .nav-list li:first-child a {
+        border-top: 0;
+    }
+    
+    .nav-list a {
+        display: block;
+        margin: 0 !important;
+        padding: 0.4em 0 !important;
+        width: 100%;
+    }
+    
+    .general-calendar th:nth-child(2),
+    .general-calendar td:nth-child(2),
+    .summer-camp-calendar td:last-child,
+    .summer-camp-calendar th:last-child {
+        display: none;
+    }
+    
+    .table th {
+        font-size: 0.8em;
+    }
+    
+    .demonight a,
+    .edgenight a,
+    .edgeday a,
+    .hackathon a,
+    .barcampalsace a,
+    .summercamp a {
+        font-size: 0.85em;
+        text-decoration: none;
+        text-align: center;
+        font-variant: small-caps;
+    }
+    
+    .content section, .event-body {
+        padding: 0 4%;
+    }
+    
+    .pull-left, .pull-right {
+        float: none;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+}
+
+/*                          320px */
+@media screen and (min-width:20em) {
+    
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    header {
+        font-size: 1em;
+    }
+    
+    .subtitle { /* Header subtitle */
+        margin-top: 4%;
+    }
+
+    .subsubtitle { /* Header subsubtitle */
+        margin-top: 3%;
+    }
+}
+
+@media screen and (min-width:31.313em) and (max-width:58.750em) {
+    
+    nav {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-list  {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        padding-left: 0;
+    }
+    
+    .nav-list li {
+        float: left;
+        width:33.333%;
+
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0.5em;
+        
+        color: transparent;
+        transition: background-color 0.3s ease-in-out 0s;
+    }
+    
+    .nav-list li:hover,
+    .nav-list li:active {
+        background-color: #545454;
+        transition: background-color 0.1s ease-in-out 0s;
+    }
+    
+    .nav-list a {
+        display: block;
+        margin: 0 !important;
+        padding: 0.4em 0 !important;
+        width: 100%;
+    }
+}
+
+/*                              941px */
+@media screen and (min-width:58.813em) {
+    
+    nav {
+        margin: 0;
+        padding: 1em 0;
+    }
+    
+    .nav-list li  {
+        display: inline;
+        margin: 0 1%;
+        padding: 0;
+    }
+    
+    .nav-list li:before {
+        content: "|";
+        color: #BBB;
+        position: relative;
+        right: 1%;
+    }
+    
+    .nav-list li:first-child:before {
+        content: "";
+    }
+    
+    .nav-list {
+        padding-left: 0;
+    }
+    
+    .nav-list a,
+    .nav-list a:visited {
+        color: #BBB;
+        transition: color 0.3s ease-in-out 0s;
+    }
+    
+    .nav-list a:hover {
+        color: white;
+        transition: color 0.1s ease-in-out 0s;
+    }
+}
+
+/*                              501px                    750px */
+@media screen and (min-width:31.313em) and (max-width:46.875em) {
+    
+    body {
+        font-size: 1.1em;
+    }
+    
+    .table th {
+        font-size: 0.9em;
+    }
+    
+    .demonight a,
+    .edgenight a,
+    .edgeday a,
+    .hackathon a,
+    .barcampalsace a,
+    .summercamp a {
+        font-size: 0.95em;
+    }
+    
+    .content section,
+    .event-body {
+        padding: 0 7%;
+    }
+    
+}
+
+/*                              751px                    900px */
+@media screen and (min-width:46.938em) and (max-width:56.250em) {
+
+    body {
+        font-size: 1.18em;
+    }
+    
+    .content section,
+    .event-body {
+        padding: 0 11%;
+    }
+
+}
+
+/*                              900px */
+@media screen and (min-width:56.313em) {
+    
+    body {
+        font-size: 1.25em;
+    }
+    
+    .content section,
+    .event-body {
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .lone-event {
+        width: 850px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+    }
+}
+
+/*                          960px */
+@media screen and (min-width:60em) {
+    
+    .event-body {
+        width: 920px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .event-infos {
+        width: 55%;
+        float: left;
+    }
+    
+    .event-images {
+        width: 35%;
+        float: right;
+    }
+
+    .thumbs li {
+        display: block;
+        margin-bottom: 0.8em;
+        width: 100%;
+    }
+}
+
+/*                             1500px */
+@media screen and (min-width:87.500em) {
+    
+    .event-body {
+        width: 100%;
+        margin: auto;
+        max-width: 93.750em;
+    }
+    
+    .event-infos {
+        width: 45%;
+        float: left;
+    }
+    
+    .event-images {
+        width: 45%;
+        float: right;
+    }
+
 }

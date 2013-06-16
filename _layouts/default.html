@@ -26,23 +26,19 @@
 
   <body>
     <header>
-      <div class="container">
         <a href="/" class="mainlink">
           <h1>EdgeFest 2013</h1>
-          <p class="subtitle">Festival des communautés numériques et créatives à Strasbourg</p>
-          <p class="subsubtitle">4-5-6-7 JUILLET 2013</p>
+          <h2 class="subtitle">Festival des communautés numériques et créatives à Strasbourg</h2>
+          <h3 class="subsubtitle">4-5-6-7 JUILLET 2013</h3>
         </a>
-      </div>
     </header>
     {% include nav.html %}
-    {% include intro.html %}
-    {{ content }}
-    <section class="sponsors">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <h2>Sponsors et Partenaires</h2>
-            <ul class="inline sponsors">
+    <div class="content">
+        {% include intro.html %}
+        {{ content }}
+        <section class="sponsors full-section">
+            <h3>Sponsors et Partenaires</h3>
+            <ul class="inline sponsor-list">
               <li><a href="http://www.alsacedigitale.org" target="_blank"><img src="img/alsacedigitale.png"/></a></li>
               <li><a href="http://www.laplagedigitale.eu" target="_blank"><img src="img/laplagedigitale.png"/></a></li>
               <li><a href="http://www.strasbourg.eu" target="_blank"><img src="img/strasbourgprefiguration.png"/></a></li>
@@ -55,23 +51,17 @@
               <li><a href="http://www.semia-incal.com" target="_blank"><img src="img/semia.gif"/></a></li>
               <li><a href="http://www.mediatheques-cus.fr" target="_blank"><img src="img/mediatheque.png"/></a></li>
              </ul>
-          </div>
+        </section>
+    </div>
+    
+    <footer class="clearfix">
+        <div class="pull-left">
+          <p>EdgeFest 2013 by Alsace Digitale</p>
         </div>
-      </div>
-    </section>
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <div class="pull-left">
-              <p>EdgeFest 2013 by Alsace Digitale</p>
-            </div>
-            <div class="pull-right">
-              <a href="http://2012.edgefest.fr">&raquo; Edition 2012</a>
-            </div>
-          </div>
+        
+        <div class="pull-right">
+          <a href="http://2012.edgefest.fr" class="edition-2012">Edition 2012</a>
         </div>
-      </div>
     </footer>
 
     <script>
