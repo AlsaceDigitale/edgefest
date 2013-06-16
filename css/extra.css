@@ -102,7 +102,7 @@ nav,
 }
 
 .nav-list a {
-    transition: all 0.3s ease-in-out 0s;
+    transition: background-color 0.3s ease-in-out 0s;
 }
     
 .nav-list a,
@@ -267,7 +267,7 @@ td hr {
 .edgenight a {
     background-color: #282828 !important;
     color: white;
-    transition: all 0.3s ease-in-out 0s;
+    transition: background-color 0.3s ease-in-out 0s;
 }
 
 .edgeday,
@@ -281,7 +281,7 @@ td hr {
 .barcampalsace a {
     background-color: #34b8d0 !important;
     color: white;
-    transition: all 0.3s ease-in-out 0s;
+    transition: background-color 0.3s ease-in-out 0s;
 }
 
 .summercamp,
@@ -289,7 +289,7 @@ td hr {
 .summercamp a {
     background-color: #11922E !important;
     color: white;
-    transition: all 0.3s ease-in-out 0s;
+    transition: background-color 0.3s ease-in-out 0s;
 }
 
 .summercamp:hover,
