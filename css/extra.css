@@ -8,7 +8,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #282828;
 
-    font-size: 1em; /* 16px by default */
+    font-size: 1.25em; /* 16px by default */
 
     padding-left: 0;
     padding-right: 0;
@@ -96,6 +96,23 @@ nav,
     text-align: center;
 }
 
+.nav-list li  {
+    display: inline;
+    margin: 0 1%;
+    padding: 0;
+}
+
+.nav-list li:before {
+    content: "|";
+    color: #BBB;
+    position: relative;
+    right: 1%;
+}
+
+.nav-list li:first-child:before {
+    content: "";
+}
+
 .nav-list {
     padding-left: 0;
     margin-left: 0;
@@ -104,16 +121,22 @@ nav,
 .nav-list a {
     transition: background-color 0.3s ease-in-out 0s;
 }
-    
+
 .nav-list a,
-.nav-list a:hover,
 .nav-list a:visited {
-    color: white;
     text-decoration: none;
     font: 800 1em "Open sans";
-    text-align: center;
-        
+    
     font-variant: small-caps;
+    text-transform: lowercase;
+    
+    color: #BBB;
+    transition: color 0.3s ease-in-out 0s;
+}
+
+.nav-list a:hover {
+    color: white;
+    transition: color 0.1s ease-in-out 0s;
 }
 
 /***** SECTION HEADERS *****/
@@ -133,6 +156,7 @@ section h4 {
     font-weight: normal;
     line-height: 1.3;
     font-variant: small-caps;
+    text-transform: lowercase;
     text-align: center;
     
     margin-top: -0.6em;
@@ -161,7 +185,7 @@ section section { /* Double sections (Hacky) Summer camp */
 .content section,
 .event-body {
     padding: 0 4%;
-    line-height: 1.3;
+    line-height: 1.35;
 }
     
 .content .full-section {
@@ -227,6 +251,18 @@ section section { /* Double sections (Hacky) Summer camp */
     line-height: 1.4;
 }
 
+.table-calendar th, .table-calendar td {
+    width: 23%;
+}
+
+.table-calendar th:first-child, .table-calendar td:first-child {
+    width: auto;
+}
+
+.round-table th:first-child, .round-table td:first-child {
+    width: 8%;
+}
+
 .table td:first-child {
     text-align: center;
     vertical-align: middle;
@@ -256,6 +292,7 @@ td hr {
     text-decoration: none;
     text-align: center;
     font-variant: small-caps;
+    text-transform: lowercase;
     line-height: 1.2;
 }
     
@@ -321,6 +358,7 @@ td hr {
 .summercamp a:after {
     display: block;
     content: "»";
+    text-align: center;
 }
 
 .demonight-section a,
@@ -403,6 +441,36 @@ td hr {
     
     background-color: white !important;
     color: #11922E !important;
+}
+
+.content section,
+.event-body {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lone-event {
+    width: 850px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    float: none !important;
+}
+
+.event-infos {
+    width: 55%;
+    float: left;
+}
+
+.event-images {
+    width: 35%;
+    float: right;
+}
+
+.thumbs li {
+    display: block;
+    margin-bottom: 0.8em;
+    width: 100%;
 }
 
 /***** SECTIONS IMAGES *****/
@@ -540,6 +608,7 @@ footer a:visited {
         padding: 0.5em;
         color: transparent;
         transition: background-color 0.3s ease-in-out 0s;
+        display: block;
     }
     
     .nav-list li:hover,
@@ -557,6 +626,13 @@ footer a:visited {
         margin: 0 !important;
         padding: 0.4em 0 !important;
         width: 100%;
+    }
+    
+    .nav-list a,
+    .nav-list a:hover,
+    .nav-list a:visited {
+        color: white;
+        text-align: center;
     }
     
     .general-calendar th:nth-child(2),
@@ -580,6 +656,7 @@ footer a:visited {
         text-decoration: none;
         text-align: center;
         font-variant: small-caps;
+        text-transform: lowercase;
     }
     
     .content section, .event-body {
@@ -651,6 +728,50 @@ footer a:visited {
         margin: 0 !important;
         padding: 0.4em 0 !important;
         width: 100%;
+    }
+    
+    
+}
+
+@media screen and (max-width:58.750em) {
+    .content section,
+    .event-body,
+    .lone-event {
+        width: auto;
+    }
+    
+    .event-infos, .event-images {
+        width: 100%;
+        float: none;
+    }
+    
+    .thumbs li {
+        display: inline-block;
+        margin-bottom: 0.8em;
+        width: 49%;
+    }
+
+    .nav-list li {
+        margin:0;
+    }
+    
+    .nav-list li:before {
+        content: "";
+    }
+    
+    .nav-list a,
+    .nav-list a:hover,
+    .nav-list a:visited,
+    .nav-list a:active {
+        color: white;
+    }
+    
+    .table-calendar td, .table-calendar th {
+        width: 31%;
+    }
+    
+    .table-calendar td:first-child, .table-calendar th:first-child {
+        width: auto;
     }
 }
 
@@ -738,10 +859,6 @@ footer a:visited {
 
 /*                              900px */
 @media screen and (min-width:56.313em) {
-    
-    body {
-        font-size: 1.25em;
-    }
     
     .content section,
     .event-body {

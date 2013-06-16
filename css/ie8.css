@@ -1,0 +1,22 @@
+header {
+  
+    /*
+    * Legacy/default boder box models
+    * allows for percentage padding to
+    * increase the box size.
+    */
+    -webkit-box-sizing: content-box;
+       -moz-box-sizing: content-box;
+            box-sizing: content-box;
+  
+    height: auto;
+    
+    width: 100%;
+    padding: 8% 0;
+    
+    font-size: 0.8em;
+    color: white;
+    
+    background: none;
+    background-color: #34b8d0;
+}
