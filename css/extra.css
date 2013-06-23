@@ -34,33 +34,6 @@ section a {
   text-decoration: underline;
 }
 
-nav {
-  text-align:center;
-  margin-top: 20px;
-}
-
-nav a, nav a:hover, nav a:visited {
-  color: white;
-  text-decoration: none;
-  font: 800 20px/30px "open sans";
-}
-
-nav a {
-  transition: all 0.3s ease-in-out 0s;
-}
-
-nav a:hover {
-  /*color: #34b8d0;*/
-}
-
-nav ul.inline {
-  margin-bottom: 0;
-}
-
-nav ul.inline > li {
-  padding: 0 20px;
-}
-
 header {
   height: 500px;
   color: white;
@@ -123,14 +96,6 @@ section.intro .span12 p:last-child {
   margin-bottom: 0;
 }
 
-section.nav {
-  background-color: #282828;
-  color: #282828;
-  min-height: 0;
-  margin-bottom: 10px;
-  padding-top: 0;
-}
-
 section.content {
   background-color: #34b8d0;
   color: #282828;
@@ -144,6 +109,77 @@ section.content {
 section.sponsors h2 {
   margin-bottom: 20px;
 }
+
+/**** NAVIGATION ****/
+
+.nav {
+    min-height: auto;
+    margin:0 0 20px 0;
+    padding: 0;
+    background-color: #282828;
+    font-size: 1.1em;
+}
+
+nav {
+    min-height: 0;
+    margin-bottom: 1em;
+    padding: 1em 0;
+}
+
+nav,
+.nav-list li {
+    text-align: center;
+}
+
+.nav-list li  {
+    display: inline;
+    margin: 0 1%;
+    padding: 0;
+    
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nav-list li:before {
+    content: "|";
+    color: #BBB;
+    position: relative;
+    right: 1%;
+}
+
+.nav-list li:first-child:before {
+    content: "";
+}
+
+.nav-list {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.nav-list a {
+    transition: background-color 0.3s ease-in-out 0s;
+}
+
+.nav-list a,
+.nav-list a:visited {
+    text-decoration: none;
+    font: 800 1em "Open sans";
+    
+    font-variant: small-caps;
+    
+    
+    color: #BBB;
+    transition: color 0.3s ease-in-out 0s;
+}
+
+.nav-list a:hover {
+    color: white;
+    transition: color 0.1s ease-in-out 0s;
+}
+
+
+/********************/
 
 .table th {
   text-align: center;
@@ -240,6 +276,15 @@ p.type {
   width: 100%;
 }
 
+.small-caps {
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.co {
+    color: #34b8d0;
+}
+
 @media screen and (max-width: 767px) {
   body {
     padding-left: 0;
@@ -256,3 +301,126 @@ p.type {
     margin-top: 150px;
   }
 }
+
+/***** MEDIA QUERIES *****/
+
+/*                              319px */
+@media screen and (max-width:19.938em) {    
+    .nav-list,
+    .nav-list li  {
+        width: 100%;
+    }
+    
+    .nav-list {
+        padding-left: 0;
+    }
+}
+
+/*                              500px */
+@media screen and (max-width:31.250em) {
+    
+    nav {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-list  {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        padding-left: 0;
+    }
+    
+    .nav-list li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0.5em;
+        color: transparent;
+        transition: background-color 0.3s ease-in-out 0s;
+        display: block;
+    }
+    
+    .nav-list li:hover,
+    .nav-list li:active {
+        background-color: #545454;
+        transition: background-color 0.1s ease-in-out 0s;
+    }
+    
+    .nav-list li:first-child a {
+        border-top: 0;
+    }
+    
+    .nav-list a {
+        display: block;
+        margin: 0 !important;
+        padding: 0.4em 0 !important;
+        width: 100%;
+    }
+    
+    .nav-list a,
+    .nav-list a:hover,
+    .nav-list a:visited {
+        color: white;
+        text-align: center;
+    }
+}
+
+/*                              501px                    750px */
+@media screen and (min-width:31.313em) and (max-width:46.875em) {
+    
+    nav {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .nav-list  {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        padding-left: 0;
+    }
+    
+    .nav-list li {
+        float: left;
+        width:33.333%;
+
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0.5em;
+        
+        color: transparent;
+        transition: background-color 0.3s ease-in-out 0s;
+    }
+    
+    .nav-list li:hover,
+    .nav-list li:active {
+        background-color: #545454;
+        transition: background-color 0.1s ease-in-out 0s;
+    }
+    
+    .nav-list a {
+        display: block;
+        margin: 0 !important;
+        padding: 0.4em 0 !important;
+        width: 100%;
+    }
+    
+}
+
+/*                              750px */
+@media screen and (max-width:46.875em) {
+    .nav-list li {
+        margin:0;
+    }
+    
+    .nav-list li:before {
+        content: "";
+    }
+    
+    .nav-list a,
+    .nav-list a:hover,
+    .nav-list a:visited,
+    .nav-list a:active {
+        color: white;
+    }
+}
+
