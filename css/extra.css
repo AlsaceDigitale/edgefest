@@ -276,6 +276,15 @@ p.type {
   width: 100%;
 }
 
+.small-caps {
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+.co {
+    color: #34b8d0;
+}
+
 @media screen and (max-width: 767px) {
   body {
     padding-left: 0;
