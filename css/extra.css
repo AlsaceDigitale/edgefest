@@ -256,6 +256,16 @@ ul.sponsors li {
   margin: 0 20px 20px 0;
 }
 
+ul.sponsors img {
+    height: auto;
+    max-width: 300px;
+    max-height: 70px;
+}
+
+ul.sponsors img.smaller {
+    max-height: 60px;
+}
+
 p.date, p.venue, p.type {
   margin: 0;
 }
