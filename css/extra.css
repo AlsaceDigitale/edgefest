@@ -24,6 +24,12 @@ ul.dotted li {
     padding-left: 10px;
     padding-right: 10px; }
 
+.full {
+  background-color: red;
+  color: white;
+  padding: 0 5px;
+  margin-left: 10px; }
+
 section a {
   text-decoration: underline; }
 
