@@ -168,7 +168,7 @@ table a {
   transition: all 0.3s ease-in-out 0s; }
 
 .edgenight, .edgenight a {
-  background-color: #99d42a !important;
+  background-color: #7aa922 !important;
   color: white;
   transition: all 0.3s ease-in-out 0s; }
 
@@ -195,7 +195,7 @@ table a {
 table .demonight:hover, table .demonight:hover a {
   background-color: #f48e55 !important; }
 table .edgenight:hover, table .edgenight:hover a {
-  background-color: #addd54 !important; }
+  background-color: #99d42a !important; }
 table .edgeday:hover, table .edgeday:hover a {
   background-color: #ec599b !important; }
 table .hackathon:hover, table .hackathon:hover a {
