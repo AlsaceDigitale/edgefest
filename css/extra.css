@@ -89,6 +89,10 @@ section {
     text-align: center; }
   section.sponsors h2 {
     margin-bottom: 20px; }
+  section.startups .startup {
+    margin-bottom: 20px; }
+    section.startups .startup .logo {
+      text-align: center; }
 
 .nav {
   min-height: auto;
